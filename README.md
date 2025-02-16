@@ -56,9 +56,9 @@ Create a `.env` file inside the `backend` folder and add the following environme
 PORT=5000  
 DATABASE_URL=your-database-connection-string  
 ```
-TODO: include section here for how to get Authentication - API token from Kaggle 
-TODO: include section here for setting up your database 
-TODO: include the API key and Database info into the .env file 
+- TODO: include section here for how to get Authentication - API token from Kaggle 
+- TODO: include section here for setting up your database 
+- TODO: include the API key and Database info into the .env file 
 ### **Start Backend Server**
 ```bash
 cd movieRater-db-backend
@@ -82,7 +82,7 @@ npm start
 | GET    | /api/movies             | Get all movies                        |  
 | GET    | /api/movies/:id         | Get a single movie by ID              |  
 | GET    | /fetch-and-download     | Fetch and download the Kaggle dataset |  
-| POST   | /api/movies/insert      | Insert movie data into the database   |  
+| POST   | /api/parse-and-insert   | Insert movie data into the database   |  
 
 ## **Future Improvements**  
 - Implement search and filter functionality for movies by year, country, etc.  
