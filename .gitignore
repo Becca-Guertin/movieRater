@@ -1,0 +1,19 @@
+node_modules/
+movieRater-frontend/node_modules/
+movieRater-db-backend/node_modules/
+
+
+# Ignore Kaggle dataset files
+movieRater-frontend/data/
+movieRater-frontend/data/*
+*.csv
+*.zip
+
+# Ignore environment and sensitive files
+.env
+movieRater-frontend/.env
+movieRater-db-backend/.env
+
+# Ignore build files
+movieRater-frontend/dist/
+movieRater-db-backend/dist/
