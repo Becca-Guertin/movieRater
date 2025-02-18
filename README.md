@@ -12,6 +12,7 @@ A full-stack web application that fetches, stores, and displays movie data from 
 - **JavaScript**  
 - **Axios** (for API calls)  
 - **React Router** (for navigation)
+- **Chakra-ui and Tailwindcss** (for styling)
 
 ### **Backend (Node.js + Express)**  
 - **Node.js**  
@@ -88,7 +89,7 @@ npm start
 - Implement search and filter functionality for movies by year, country, etc.  
 - Add user authentication to allow users to rate or review movies  
 - Improve UI/UX design for better user experience  
-- Enable pagination for displaying large numbers of movies  
+- ``Enable pagination for displaying large numbers of movies`` COMPLETED ✅  
 
 
 ## **License**

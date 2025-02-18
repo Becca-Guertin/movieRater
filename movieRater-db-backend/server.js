@@ -104,9 +104,10 @@ app.get("/api/movies/:id", async (req, res) => {
   try {
     const movieId = req.params.id;
     // Query the database to get the movie details based on the ID
+    const pool = await getPool();
     const result = await pool.request()
       .input("id", sql.Int, movieId)
-      .query("SELECT * FROM CriterionFilms WHERE id = @id");
+      .query`SELECT * FROM CriterionFilms WHERE id= ${movieId}`;
 
     if (result.recordset.length === 0) {
       return res.status(404).json({ error: "Movie not found" });
