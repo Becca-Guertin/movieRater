@@ -4,6 +4,17 @@ A full-stack web application that fetches, stores, and displays movie data from 
 
 ---
 
+## Website Screenshots
+Below are two screenshots of the site for reference
+
+### Screenshot 1 - Homepage:
+![Homepage Screenshot](./movieRater-frontend/src/assets/images/logit-website-github-img.png)
+
+### Screenshot 2 - Criterion Films page:
+![Criterion Films Page Screenshot](./movieRater-frontend/src/assets/images/moviesPage-logit-website-github.png)
+
+---
+
 ## **🚀 Technologies Used**  
 
 ### **Frontend (React + Vite)**  
