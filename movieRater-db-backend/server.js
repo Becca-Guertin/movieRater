@@ -99,6 +99,20 @@ app.get("/api/all-movies", async (req, res) => {
   }
 });
 
+//The route/endpoint that fetches ALL current data from the database
+app.get("/api/all-logit-movies", async (req, res) => {
+  try {
+    const pool = await getPool(); // Get the connection pool
+    const result = await pool.request().query("SELECT * FROM LogitEpMovies"); // Query the database
+    res.json(result.recordset); // Send the result as a response
+  } catch (err) {
+    console.error("Error querying the database:", err); // Log any errors
+    res
+      .status(500)
+      .json({ error: "Database query failed", details: err.message });
+  }
+});
+
 // Route to fetch a single movie's details 
 app.get("/api/movies/:id", async (req, res) => {
   try {
@@ -108,6 +122,27 @@ app.get("/api/movies/:id", async (req, res) => {
     const result = await pool.request()
       .input("id", sql.Int, movieId)
       .query`SELECT * FROM CriterionFilms WHERE id= ${movieId}`;
+
+    if (result.recordset.length === 0) {
+      return res.status(404).json({ error: "Movie not found" });
+    }
+
+    res.json(result.recordset[0]);
+  } catch (err) {
+    console.error("Error fetching movie details:", err);
+    res.status(500).json({ error: "Failed to fetch movie details" });
+  }
+});
+
+// Route to fetch a single movie's details from Log-it! episode db
+app.get("/api/logit-movies/:id", async (req, res) => {
+  try {
+    const movieId = req.params.id;
+    // Query the database to get the movie details based on the ID
+    const pool = await getPool();
+    const result = await pool.request()
+      .input("id", sql.Int, movieId)
+      .query`SELECT * FROM LogitEpMovies WHERE id= ${movieId}`;
 
     if (result.recordset.length === 0) {
       return res.status(404).json({ error: "Movie not found" });
