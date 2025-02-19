@@ -20,7 +20,7 @@ const LogitEpMovieCard = ({ movie }) => {
       marginTop="10px"
       marginBottom="10px"
     >
-      <Image src={movie.imgUrl} alt="movie poster image" />
+      <Image width="300px" height="300px"src={movie.imgUrl} alt="movie poster image" />
       <Card.Body gap="2">
         <Card.Title>
           <h3>{movie.title}</h3>
