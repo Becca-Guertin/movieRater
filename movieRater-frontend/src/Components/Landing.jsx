@@ -33,9 +33,7 @@ const LandingPage = () => {
             borderRadius="lg"
             _hover={{ bg: "green" }}
           >
-            <Image src={logitText} alt="Another Movie Rating Website">
-              {/* <a href="https://www.instagram.com/logit_pod/"></a> */}
-            </Image>
+            <Image src={logitText} alt="Another Movie Rating Website"></Image>
           </Box>
           <Button
             variant="solid"
@@ -44,7 +42,7 @@ const LandingPage = () => {
             color="white"
             _hover={{ bg: "black" }}
           >
-            <a>Log-it! Episode Features</a>
+            <a href="./logit-movies">Log-it! Episode Features</a>
           </Button>
           <Button
             variant="solid"

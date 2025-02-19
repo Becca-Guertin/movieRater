@@ -101,7 +101,7 @@ const MoviesList = () => {
             _hover={{ bg: "black" }}
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             isDisabled={currentPage === 1}
-            mt="10px"
+            mt="20px"
           >
             Previous
           </Button>

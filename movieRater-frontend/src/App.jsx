@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./Components/Landing.jsx";
 import Movies from "./Components/Movies/Movies.jsx";
 import Footer from "./Components/Footer.jsx";
+import LogitEpMovies from "./Components/Logit/LogitEpMovies.jsx"
 import SingleMovieDetails from "./Components/Movies/SingleMovieDetails.jsx";
+import LogitEpMovieDetails from "./Components/Logit/LogitEpMovieDetails.jsx";
 import "./App.css";
 
 const App = () => {
@@ -16,7 +18,9 @@ const App = () => {
         <div className="App">
           <Routes>
             <Route path="/" element={<Landing />} />
-            <Route path="/movies" element={<Movies />}s />
+            <Route path="/movies" element={<Movies />}/>
+            <Route path="/logit-movies" element={<LogitEpMovies/>} />
+            <Route path="/logit-movies/:id" element={<LogitEpMovieDetails/>} />
             <Route path="/movies/:id" element={<SingleMovieDetails />} />
           </Routes>
         </div>
